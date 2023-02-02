@@ -9,10 +9,11 @@ import io.cucumber.junit.Cucumber;
 
 //plugin = {"pretty","json:target/JSONReports/report.json"}
 //plugin = { "pretty","html:target/HTMLReports/report.html" }
+//tags="@SmokeTest"
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources", glue = { "StepDefinations" }, monochrome = true, 
-plugin = { "pretty","html:target/XMLReports/report.xml","json:target/JSONReports/report.json","html:target/HTMLReports/report.html" },tags="@SmokeTest")
+@CucumberOptions(features = "src/test/resources", glue = { "StepDefinations"}, monochrome = true, 
+plugin = { "pretty","html:target/XMLReports/report.xml","json:target/JSONReports/report.json","html:target/HTMLReports/report.html" })
 
 public class TestRunner {
 	
